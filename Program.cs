@@ -11,9 +11,10 @@ namespace PrimeShifting
 			Console.WriteLine("Enter a number: ");
 			int userNumber = int.Parse(Console.ReadLine());
 			Prime userPrimes = new Prime(userNumber);
-			int primes = userPrimes.GetPrimes(userNumber);
-			Console.WriteLine(primes);
-			// Console.WriteLine("These are the prime factors of your number: ");
+			userPrimes.SetCountList(userNumber);
+			// Console.WriteLine(userPrimes._numberList[]);
+			userPrimes.SetNonPrimeList(userNumber);
+			userPrimes.ShowPrimeNumbers();
 		}
 	}
 }
